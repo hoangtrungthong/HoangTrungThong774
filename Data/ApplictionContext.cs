@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using HoangTrungThong774.Models;
 
-    public class ApplictionContext : DbContext
+namespace HoangTrungThong774.Data 
+{
+     public class ApplictionContext : DbContext
     {
         public ApplictionContext (DbContextOptions<ApplictionContext> options)
             : base(options)
@@ -13,4 +15,8 @@ using HoangTrungThong774.Models;
         }
 
         public DbSet<HoangTrungThong774.Models.PersonHTT774> PersonHTT774 { get; set; }
+
+        public DbSet<HoangTrungThong774.Models.HTT0774> HTT0774 { get; set; }
     }
+}
+   

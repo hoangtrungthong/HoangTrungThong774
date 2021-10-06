@@ -10,22 +10,22 @@ using HoangTrungThong774.Data;
 
 namespace HoangTrungThong774.Controllers
 {
-    public class PersonHTT774sController : Controller
+    public class HTT0774sController : Controller
     {
         private readonly ApplictionContext _context;
 
-        public PersonHTT774sController(ApplictionContext context)
+        public HTT0774sController(ApplictionContext context)
         {
             _context = context;
         }
 
-        // GET: PersonHTT774s
+        // GET: HTT0774s
         public async Task<IActionResult> Index()
         {
-            return View(await _context.PersonHTT774.ToListAsync());
+            return View(await _context.HTT0774.ToListAsync());
         }
 
-        // GET: PersonHTT774s/Details/5
+        // GET: HTT0774s/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace HoangTrungThong774.Controllers
                 return NotFound();
             }
 
-            var personHTT774 = await _context.PersonHTT774
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (personHTT774 == null)
+            var hTT0774 = await _context.HTT0774
+                .FirstOrDefaultAsync(m => m.HTTId == id);
+            if (hTT0774 == null)
             {
                 return NotFound();
             }
 
-            return View(personHTT774);
+            return View(hTT0774);
         }
 
-        // GET: PersonHTT774s/Create
+        // GET: HTT0774s/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: PersonHTT774s/Create
+        // POST: HTT0774s/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,PersonName")] PersonHTT774 personHTT774)
+        public async Task<IActionResult> Create([Bind("HTTId,HTTName,HTTGender")] HTT0774 hTT0774)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(personHTT774);
+                _context.Add(hTT0774);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(personHTT774);
+            return View(hTT0774);
         }
 
-        // GET: PersonHTT774s/Edit/5
+        // GET: HTT0774s/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace HoangTrungThong774.Controllers
                 return NotFound();
             }
 
-            var personHTT774 = await _context.PersonHTT774.FindAsync(id);
-            if (personHTT774 == null)
+            var hTT0774 = await _context.HTT0774.FindAsync(id);
+            if (hTT0774 == null)
             {
                 return NotFound();
             }
-            return View(personHTT774);
+            return View(hTT0774);
         }
 
-        // POST: PersonHTT774s/Edit/5
+        // POST: HTT0774s/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonId,PersonName")] PersonHTT774 personHTT774)
+        public async Task<IActionResult> Edit(string id, [Bind("HTTId,HTTName,HTTGender")] HTT0774 hTT0774)
         {
-            if (id != personHTT774.PersonId)
+            if (id != hTT0774.HTTId)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace HoangTrungThong774.Controllers
             {
                 try
                 {
-                    _context.Update(personHTT774);
+                    _context.Update(hTT0774);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonHTT774Exists(personHTT774.PersonId))
+                    if (!HTT0774Exists(hTT0774.HTTId))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace HoangTrungThong774.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(personHTT774);
+            return View(hTT0774);
         }
 
-        // GET: PersonHTT774s/Delete/5
+        // GET: HTT0774s/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace HoangTrungThong774.Controllers
                 return NotFound();
             }
 
-            var personHTT774 = await _context.PersonHTT774
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (personHTT774 == null)
+            var hTT0774 = await _context.HTT0774
+                .FirstOrDefaultAsync(m => m.HTTId == id);
+            if (hTT0774 == null)
             {
                 return NotFound();
             }
 
-            return View(personHTT774);
+            return View(hTT0774);
         }
 
-        // POST: PersonHTT774s/Delete/5
+        // POST: HTT0774s/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var personHTT774 = await _context.PersonHTT774.FindAsync(id);
-            _context.PersonHTT774.Remove(personHTT774);
+            var hTT0774 = await _context.HTT0774.FindAsync(id);
+            _context.HTT0774.Remove(hTT0774);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonHTT774Exists(string id)
+        private bool HTT0774Exists(string id)
         {
-            return _context.PersonHTT774.Any(e => e.PersonId == id);
+            return _context.HTT0774.Any(e => e.HTTId == id);
         }
     }
 }

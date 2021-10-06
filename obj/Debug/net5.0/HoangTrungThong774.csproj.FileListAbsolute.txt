@@ -163,3 +163,8 @@ D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\PersonHTT774s\De
 D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\PersonHTT774s\Details.cshtml.g.cs
 D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\PersonHTT774s\Edit.cshtml.g.cs
 D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\PersonHTT774s\Index.cshtml.g.cs
+D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\HTT0774s\Create.cshtml.g.cs
+D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\HTT0774s\Delete.cshtml.g.cs
+D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\HTT0774s\Details.cshtml.g.cs
+D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\HTT0774s\Edit.cshtml.g.cs
+D:\xampp\htdocs\HoangTrungThong774\obj\Debug\net5.0\Razor\Views\HTT0774s\Index.cshtml.g.cs
